@@ -1,0 +1,15 @@
+########fib number########
+fibs=[0,1]
+num=int(input('How many fibonacci numbers do you want?'))
+for i in range(num-2):
+	fibs.append(fibs[-2]+fibs[-1])
+	print (fibs)
+How many fibonacci numbers do you want?5
+[0, 1, 1]
+[0, 1, 1, 2]
+[0, 1, 1, 2, 3]
+
+######creative and check whether the function is callable########
+y=math.sqrt
+callable(y)
+True
