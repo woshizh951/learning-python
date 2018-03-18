@@ -1,0 +1,120 @@
+#print 的多重输出
+print(1,2,3)
+1,2,3
+print((1,2,3))
+(1, 2, 3)  
+
+#序列解包
+x,y,z=1,2,3
+print x,y,z
+1 2 3
+x,y=y,x
+print x,y,z
+2 1 3
+
+values=1,2,3
+>>> values
+(1, 2, 3)
+>>> x,y,z=values
+>>> x,y,z
+(1, 2, 3)
+
+#增量赋值
+
+x=2
+x+=1
+x*=2
+x
+6
+
+#断言
+age=10
+>>> assert 0<age<100
+>>> assert 11<age<100
+Traceback (most recent call last):
+  File "<pyshell#139>", line 1, in <module>
+    assert 11<age
+
+
+#while 循环
+
+ x=1
+>>> while x<=100:
+	print (x)
+	x+=1
+
+#for 循环
+
+for number in range(0,10):
+	print (number)
+
+#循环遍历字典
+z=[('x',1),('y',2),('z',3)]
+>>> d=dict(z)
+>>> for key in d:
+	print (key,'corrspond to',d[key])
+x corrspond to 1
+y corrspond to 2
+z corrspond to 3
+
+####迭代工具
+1.并行迭代
+names=['anne','jack','bob','damon']
+>>> ages=[12,34,67,32]
+>>> for i in range(len(names)):
+	print (names[i],'is',ages[i],'years old')
+
+anne is 12 years old
+jack is 34 years old
+bob is 67 years old
+damon is 32 years old
+
+zip(names,ages)
+
+#排序迭代
+print
+sorted("hello,world!")
+['!', ',', 'd', 'e', 'h', 'l', 'l', 'l', 'o', 'o', 'r', 'w']
+>>> list('hello,world')
+['h', 'e', 'l', 'l', 'o', ',', 'w', 'o', 'r', 'l', 'd']
+>>> price=['apple','1','banana','2'] 
+>>> ''.join(reversed('hello.world'))
+'dlrow.olleh'
+
+#if elif else语句
+if num>0:
+	print('the number is positive')
+elif num<0:
+	print('the number is negative')
+else:
+	print('the number is zero')
+
+#while True 习语
+while True:
+	word = input('Please enter a word:')
+	if not word:break
+	# deal with word
+	print ('the word was'+word)
+
+	
+Please enter a word:sss
+the word wassss
+Please enter a word:
+
+#列表推导式
+[x*x for x in range(0,10)]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+[x*x for x in range(0,10)if x %3==0]
+[0, 9, 36, 81]
+[(x,y) for x in range(0,10) for y in range(0,10)]
+[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9)]
+
+#pass,del exec
+exec 执行字符串
+exec ("print('hello,world')")
+hello,world
+
+Eval 执行运算
+eval(input("Enter an arithmetic expression:"))
+Enter an arithmetic expression:5+14*53
+747
